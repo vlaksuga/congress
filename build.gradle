@@ -1,5 +1,5 @@
 plugins {
-	id 'org.springframework.boot' version '2.5.0'
+	id 'org.springframework.boot' version '2.4.6'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 }
@@ -20,9 +20,30 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// Web
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// MyBatis
+	implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.2.0'
+
+	// MySql
+	runtimeOnly 'mysql:mysql-connector-java'
+
+	// JDBC
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: '2.4.6'
+
+	// Lombok
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// Tomcat
+	implementation 'org.springframework.boot:spring-boot-starter-tomcat'
+	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+
+	// JSTL
+	implementation 'javax.servlet:jstl'
 }
 
 test {

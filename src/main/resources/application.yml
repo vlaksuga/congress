@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/congress
+    username: vlaksuga
+    password: kim31010
+    # driver-class-name: org.mysql.jdbc.Driver
+  mvc:
+    view:
+      prefix: /WEB-INF/view/
+      suffix: .jsp
+
+mybatis:
+  type-aliases-package: com.vlaksuga.congress.mapper
+  mapper-locations: mybatis/mapper/**/*.xml
