@@ -4,6 +4,9 @@
 
 <mapper namespace="com.vlaksuga.congress.mapper.ProvinceMapper">
     <select id="getProvince" resultType="java.util.HashMap">
-        SELECT * FROM province;
+        SELECT * FROM province
+    </select>
+    <select id="getProvinceById" resultType="java.util.HashMap">
+        SELECT * FROM province WHERE province_id = #{id}
     </select>
 </mapper>

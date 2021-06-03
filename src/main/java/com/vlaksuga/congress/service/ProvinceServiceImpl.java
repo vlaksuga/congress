@@ -9,7 +9,7 @@ import java.util.Map;
 
 @Service
 public class ProvinceServiceImpl implements ProvinceService{
-    private ProvinceMapper provinceMapper;
+    private final ProvinceMapper provinceMapper;
 
     @Autowired
     ProvinceServiceImpl(ProvinceMapper provinceMapper) {
@@ -20,4 +20,10 @@ public class ProvinceServiceImpl implements ProvinceService{
     public List<Map<String, Object>> getProvince() {
         return provinceMapper.getProvince();
     }
+
+    @Override
+    public Map<String, Object> getProvinceById(Integer id) {
+        return provinceMapper.getProvinceById(id);
+    }
+
 }

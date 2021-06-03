@@ -10,4 +10,5 @@ import java.util.Map;
 @Mapper
 public interface ProvinceMapper {
     List<Map<String, Object>> getProvince();
+    Map<String, Object> getProvinceById(Integer id);
 }
